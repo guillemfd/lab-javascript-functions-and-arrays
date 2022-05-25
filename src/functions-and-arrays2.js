@@ -85,3 +85,36 @@ function sumNumbers(arr) {
   }
 
   console.log(sumNumbers(numbersArray))
+
+
+
+//BONUS 1
+//Let's implement the function sum() that calculates the sum for array filled with (almost) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.
+
+const mixedArr = [6, 12, 'miami', 1, false, true, 'barca', '200', 'lisboa', 8, 10];
+// should return: 57
+
+
+function sum(arr) {
+  let newTotal = 0
+
+  for (let i = 0; i < arr.length;  i++){
+    if (typeof arr[i] === 'number') {
+      newTotal += arr[i]; 
+    } else if (typeof arr[i] === 'string') {
+      newTotal += arr[i].length
+    } else if (typeof arr[i] === 'boolean') {
+      if (arr[i] === true) {
+        newTotal += 1
+      } else {
+        newTotal += 0
+      }
+    // } else if (typeof arr[i] === 'object') {
+    //   throw new Error("Unsupported data type")
+    }
+  }
+  return newTotal
+}
+console.log(sum(mixedArr))
+
+
