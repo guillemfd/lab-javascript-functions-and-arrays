@@ -71,7 +71,7 @@ function findLongestWord3(words) {
 //3
 //Implement the function named sumNumbers that takes an array of numbers as an argument, and returns the sum of all of the numbers in the array. Later in the course we will learn how to do this by using the reduce array method, which will make your work significantly easier. For now, let's practice "declarative" way adding values, using loops.
 
-const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+const numbersArray = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 let total = 0
 
@@ -84,4 +84,4 @@ function sumNumbers(arr) {
     return total;
   }
 
-  console.log(sumNumbers(numbers))
+  console.log(sumNumbers(numbersArray))
