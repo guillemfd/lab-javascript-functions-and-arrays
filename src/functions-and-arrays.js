@@ -11,6 +11,8 @@ function maxOfTwoNumbers(numberOne, numberTwo) {
   }
 }
 
+maxOfTwoNumbers(2, 5)
+
 
 // Iteration #2: Find longest word
 //Implement the function findLongestWord that takes as an argument an array of words and returns the longest one. If there are 2 with the same length, it should return the first occurrence.
