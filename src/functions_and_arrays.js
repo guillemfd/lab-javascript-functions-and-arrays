@@ -1,4 +1,6 @@
 //1   -----------------------------------------------------------------------------------------------------
+//v1
+console.log('Ex1 - V1')
 function maxOfTwoNumbers(a, b) {
     if (a > b) {
         console.log(`${a}`)
@@ -13,9 +15,30 @@ maxOfTwoNumbers(8, 2)
 
 
 
+//v2
+console.log('Ex1 <---------------------------------------------------------- V2')
+
+function majorNumber (a, b) {
+  if (a > b) {
+    console.log(a)
+  } else if (a < b) {
+    console.log(b)    
+  } else {
+    console.log('Both are the same number!')
+  }
+}
+console.log(majorNumber(5, 5))
+
+
+
+
+
+
 //2   ----------------------------------------------------------------------------------------------------- 
 //-- Implement the function findLongestWord that takes as an argument an array of words and returns the longest one. If there are 2 with the same length, it should return the first occurrence.
 
+//v2
+console.log('Ex2 <---------------------------------------------------------- V1')
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
 
@@ -35,6 +58,9 @@ function findLongestWord(words) {
 
 
 //2 v2 ----------------------------------------------
+//v2
+console.log('Ex2 <---------------------------------------------------------- V2')
+
 function findLongestWord2(arr) {
     if (arr.length === 0) {
         return null
@@ -53,6 +79,8 @@ console.log(findLongestWord2(words))
 
 
 //2 v3 ----------------------------------------------
+//v2
+console.log('Ex2 <---------------------------------------------------------- V3')
 function findLongestWord3(words) {
     let longestWord = "";
     if (words.length === 0)
@@ -69,9 +97,65 @@ function findLongestWord3(words) {
 
 
 
+
+//v2
+console.log('Ex2 <---------------------------------------------------------- V4')
+
+function findLongest (arr) {
+  let longest = ''                             //declarem una nova variable 'longest' on escriure el resultat de la f
+  for (let i=0; i<arr.length; i++) {           //li diem que executi el loop a partir de l'index 0, mentres es trobi dins de la llargada de l'array
+    if (longest.length < arr[i].length) {      //'longest' va canviant, en cada moment és cadascun dels items de l'array. Mentre la llargada de 'longest' sigui < que la llargada del següent item aquest canviarà pel nou. En el moment en que el item que hi hagi a 'longest' sigui >= al nou, el loop s'aturarà.
+      longest = arr[i]                         //aquí li diem que 'longest' = a l'element que toqui en cada moment de l'array, fins que el loop s'aturi.
+    }
+  }
+  return longest
+}
+
+console.log(findLongest(words))
+
+
+
+
+console.log('Ex2 <---------------------------------------------------------- V5')
+
+function paraulaLlarga (arr) {
+  let laLlarga = ''
+  if (!arr.length) {
+    console.log(`Auontestà l'array?`)
+  } else {
+    for (let i=0; i<arr.length; i++) {
+      if (laLlarga.length < arr[i].length) {
+        laLlarga = arr[i]
+      }
+    }
+  }
+  return laLlarga
+}
+ console.log(paraulaLlarga(words))
+
+
+
+ console.log('Ex2 <---------------------------------------------------------- V6')
+ function getShortestWord(wordsArray) {
+	return wordsArray.sort((a, b) => a.length - b.length)[0];
+}
+console.log('The shortest word is: ')
+console.log(getShortestWord(words))
+
+
+
+function getLongestWord(arr) {
+	return arr.sort((a, b) => b.length - a.length)[0];
+}
+console.log('The longest word is: ')
+console.log(getLongestWord(words))
+
+
+
 //3   -----------------------------------------------------------------------------------------------------
 //Implement the function named sumNumbers that takes an array of numbers as an argument, and returns the sum of all of the numbers in the array. Later in the course we will learn how to do this by using the reduce array method, which will make your work significantly easier. For now, let's practice "declarative" way adding values, using loops.
-
+//v2
+console.log('Ex3 <---------------------------------------------------------- V1')
 const numbersArray = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 let total = 0
@@ -89,8 +173,12 @@ function sumNumbers(arr) {
 
 
 
+console.log('Ex3 <---------------------------------------------------------- V2')
+
+
 //BONUS 3.1   -----------------------------------------------------------------------------------------------------
 //Let's implement the function sum() that calculates the sum for array filled with (almost) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.
+console.log('Ex3.1 <---------------------------------------------------------- V1')
 
 const mixedArr = [6, 12, 'miami', 1, false, true, 'barca', '200', 'lisboa', 8, 10];
 // should return: 57
@@ -117,6 +205,9 @@ function sum(arr) {
   return newTotal
 }
 console.log(sum(mixedArr))
+
+
+console.log('Ex3.1 <---------------------------------------------------------- V1')
 
 
 
