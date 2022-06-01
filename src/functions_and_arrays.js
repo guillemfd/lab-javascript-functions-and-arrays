@@ -200,8 +200,8 @@ function sumaTels (arr) {
 console.log(sumaTels(numbersArray))
 
 
-console.log('Hey, extra BONUS 4 me <---------------------------------------------------------- Hey, extra BONUS 4 me')
-//Dónam la suma del número que proposi amb els seus anteriors fins arribar a 0
+console.log('Hey, extra BONUS 4 me <--------------------------- ITERATIVELY ------------------------------- Hey, extra BONUS 4 me')
+//Dónam la suma del número que proposi amb els seus anteriors fins arribar a 0 (De manera ITERATIVA)
 function sumaAnteriors (num) {
   if (!num) {
     console.log('Dude, give me a valid number!')
@@ -225,6 +225,27 @@ function factorial(n) {
   return resultat
 }
 console.log(factorial(10))
+
+
+
+console.log('Hey, extra BONUS 4 me <--------------------------- RECURSIVELY ------------------------------- Hey, extra BONUS 4 me')
+//Mateixos exercisis anteriors però de manera RECURSIVA
+function sumaRecursively (n) {
+  if (n == 0)
+    return 0
+  return n + sumaRecursively(n -1)
+}
+console.log(sumaRecursively(10))
+
+
+function factorialRecursively (n) {
+  if (n == 0)
+    return 1
+  return n * factorialRecursively(n -1)
+}
+console.log(factorialRecursively(10))
+
+
 
 //BONUS 3.1   -----------------------------------------------------------------------------------------------------
 //Let's implement the function sum() that calculates the sum for array filled with (almost) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.
