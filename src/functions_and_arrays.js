@@ -135,7 +135,7 @@ function paraulaLlarga (arr) {
 
 
 
- console.log('Ex2 <---------------------------------------------------------- V6')
+ console.log('Ex2 <------------------------------------------------- .sort --------- V6')
  function getShortestWord(wordsArray) {
 	return wordsArray.sort((a, b) => a.length - b.length)[0];
 }
@@ -150,6 +150,22 @@ function getLongestWord(arr) {
 console.log('The longest word is: ')
 console.log(getLongestWord(words))
 
+
+console.log('Ex2 <------------------------------------------------- .sort --------- V7')
+function laMes (arr) {
+  if (!arr.length) {
+    console.log('Xato, aquest array està buit')
+  } else {
+    let paraula = ''
+    for (let i=0; i<arr.length; i++) {
+      if (paraula.length < arr[i].length) {
+        paraula = arr[i]
+      }
+    }
+    return paraula
+  }
+}
+console.log(laMes(words))
 
 
 //3   -----------------------------------------------------------------------------------------------------
@@ -174,7 +190,41 @@ function sumNumbers(arr) {
 
 
 console.log('Ex3 <---------------------------------------------------------- V2')
+function sumaTels (arr) {
+  let elTotal = 0
+  for (i=0; i<arr.length; i++) {
+    elTotal += arr[i]
+  }
+  return elTotal
+}
+console.log(sumaTels(numbersArray))
 
+
+console.log('Hey, extra BONUS 4 me <---------------------------------------------------------- Hey, extra BONUS 4 me')
+//Dónam la suma del número que proposi amb els seus anteriors fins arribar a 0
+function sumaAnteriors (num) {
+  if (!num) {
+    console.log('Dude, give me a valid number!')
+  } else {
+    let totalNums= 0
+    for (let i=0; i<=num; i++) {
+      totalNums += i
+    }
+    return totalNums
+  }
+}
+console.log(sumaAnteriors(10))
+
+
+//Dónam la multiplicació del número que proposi amb els seus anteriors fins arribar a 0
+function factorial(n) {
+  var resultat = 1
+  for (var i=1; i<=n; i++) {
+    resultat *= i
+  }
+  return resultat
+}
+console.log(factorial(10))
 
 //BONUS 3.1   -----------------------------------------------------------------------------------------------------
 //Let's implement the function sum() that calculates the sum for array filled with (almost) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.
