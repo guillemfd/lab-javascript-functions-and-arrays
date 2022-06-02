@@ -296,7 +296,7 @@ function sum(arr) {
 console.log(sum(mixedArr))
 
 
-console.log('Ex3.1 BONUS <---------------------------------------------------------- V2 +++++++++++++++++++++++++++++++++++++')
+console.log('Ex3.1 BONUS <---------------------------------------------------------- V2')
 
 function sumMixed (arr) {
   if (!arr.length) {
@@ -344,7 +344,7 @@ console.log(sumMixed(mixedArr))
 //4.1Implement the function averageNumbers that expects an array of numbers and returns the average of the numbers
 console.log('Ex4.1 <---------------------------------------------------------- V1')
 
-const numbers = [2, 6, 9, 10, 7, 4, 1, 9]
+const numbers = [2, 6, 9, 10, 7, 4, 1, 9, 235, 59, 0]
 
 function averageNumbers(arr) {
   let average = 0
@@ -358,17 +358,19 @@ console.log(averageNumbers(numbers))
 
 console.log('Ex4.1 <---------------------------------------------------------- V2')
 
-
-
-
-
-
-
-
-
-
-
-
+function mitjana (arr) {
+  if (!arr.length) {
+    console.log('Imbècil, això està buit')
+  }
+  let suma = 0
+  let mitjanaFinal = 0
+  for (let i=0; i<arr.length; i++) {
+    suma += arr[i]
+  }
+  mitjanaFinal = suma / arr.length
+  return mitjanaFinal.toFixed(3) //Per arrodonir número a x decimals
+}
+console.log(mitjana(numbers))
 
 
 
@@ -390,9 +392,46 @@ function averageWordLength(arr) {
 console.log(averageWordLength(newWords))
 
 
-console.log('Ex4.2 <---------------------------------------------------------- V2')
+console.log('Ex4.2 <---------------------------------------------------------- V2222222 ++++++++++++++++++++++++++++++++')
+
+const pullits = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
+function mitjanaStrings (arr) {
+    if (arr.lenght === 0) {
+    console.log('Però què és aquesta merda que em dones?')
+  }
+
+  let sumaTotalStrings = 0
+  // let mitjanaFinalStrings = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    sumaTotalStrings += arr[i].length
+  }
+  // mitjanaFinalStrings = sumaTotalStrings / arr.lenght
+  // return mitjanaFinalStrings.toFixed(3)
+  return sumaTotalStrings
+}
+console.log('<  -------  >')
+console.log(mitjanaStrings(pullits))
+console.log('<  -------  >')
 
 
+// function mitjanaStrings (arr) {
+//   // if (!arr.lenght) {
+//   //   console.log('Però què és aquesta merda que em dones?')
+//   // }
+
+//   let sumaTotalStrings = 0
+//   // let mitjanaFinalStrings = 0
+
+//   for (let i=0; i<arr.lenght; i++) {
+//     sumaTotalStrings += arr[i].length / arr.lenght
+//   }
+//   // mitjanaFinalStrings = sumaTotalStrings / arr.lenght
+//   // return mitjanaFinalStrings.toFixed(3)
+//   return sumaTotalStrings
+// } 
+// console.log(mitjanaStrings(pullits))
 
 
 
