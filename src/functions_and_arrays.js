@@ -200,6 +200,24 @@ function sumaTels (arr) {
 console.log(sumaTels(numbersArray))
 
 
+
+console.log('Ex3.1 <---------------------------------------------------------- V3')
+
+function sumaArray (arr) {
+  if (!arr.length) {
+    console.log('Aquest array està vuit, tros de nyu')
+  }
+    let sumatori = 0
+    for (let i=0; i<arr.length; i++) {
+      sumatori += arr[i]
+    }
+    return sumatori
+}
+console.log(sumaArray(numbersArray))
+
+
+
+
 console.log('Hey, extra BONUS 4 me <--------------------------- ITERATIVELY ------------------------------- Hey, extra BONUS 4 me')
 //Dónam la suma del número que proposi amb els seus anteriors fins arribar a 0 (De manera ITERATIVA)
 function sumaAnteriors (num) {
@@ -249,7 +267,7 @@ console.log(factorialRecursively(10))
 
 //BONUS 3.1   -----------------------------------------------------------------------------------------------------
 //Let's implement the function sum() that calculates the sum for array filled with (almost) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.
-console.log('Ex3.1 <---------------------------------------------------------- V1')
+console.log('Ex3.1 BONUS <---------------------------------------------------------- V1')
 
 const mixedArr = [6, 12, 'miami', 1, false, true, 'barca', '200', 'lisboa', 8, 10];
 // should return: 57
@@ -278,12 +296,53 @@ function sum(arr) {
 console.log(sum(mixedArr))
 
 
-console.log('Ex3.1 <---------------------------------------------------------- V1')
+console.log('Ex3.1 BONUS <---------------------------------------------------------- V2 +++++++++++++++++++++++++++++++++++++')
+
+function sumMixed (arr) {
+  if (!arr.length) {
+    console.log('There is nothing here')
+  }
+  let mixedTotal = 0
+ for (let i=0; i<arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      mixedTotal += arr[i]
+    } else if (typeof arr[i] === 'string') {
+      mixedTotal += arr[i].length
+    } else if ( typeof arr[i] === 'boolean') {
+        if (arr[i] == true) {
+          mixedTotal += +1
+        } else if (arr[i] == false) {
+          mixedTotal
+        }
+    } else {
+      mixedTotal
+    }
+  }
+  return mixedTotal
+}
+console.log(sumMixed(mixedArr))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 //4   -----------------------------------------------------------------------------------------------------
 //4.1Implement the function averageNumbers that expects an array of numbers and returns the average of the numbers
+console.log('Ex4.1 <---------------------------------------------------------- V1')
 
 const numbers = [2, 6, 9, 10, 7, 4, 1, 9]
 
@@ -297,6 +356,25 @@ function averageNumbers(arr) {
 
 console.log(averageNumbers(numbers))
 
+console.log('Ex4.1 <---------------------------------------------------------- V2')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('Ex4.2 <---------------------------------------------------------- V1')
 
 //Implement the function named averageWordLength that receives as a single argument an array of words and returns the average length of the words
 const newWords = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
@@ -310,6 +388,21 @@ function averageWordLength(arr) {
 }
 
 console.log(averageWordLength(newWords))
+
+
+console.log('Ex4.2 <---------------------------------------------------------- V2')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
