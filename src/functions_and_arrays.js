@@ -499,11 +499,10 @@ function mitjanaMixed(arr) {
     }
   }
 
-  let mitjanaMixedFinal = mixedSuma / arr.length
+  let mitjanaMixedFinal = mixedSuma / (arr.length -1)
 
   return mitjanaMixedFinal.toFixed(1)
 }
-
 console.log(mitjanaMixed(mixedArr))
 
 
@@ -566,6 +565,27 @@ function uniquifyArray(arr) {
 
 //   console.log('Mi nuevo array sin duplicados es: ')
 //   console.log(uniquifyArray(words3));
+
+//v2
+function cleanArray(arr) {
+  if (!arr.length) {
+    console.log('Dame argo, polfavol')
+  }
+
+  let cleanedArray = []
+  for (let i=0; i<arr.length; i++) {
+    if () {
+
+    } else {
+      cleanedArray += arr[i]
+    }
+  }
+  return cleanedArray
+
+}
+
+
+
 
 
 
