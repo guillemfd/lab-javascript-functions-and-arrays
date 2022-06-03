@@ -392,28 +392,27 @@ function averageWordLength(arr) {
 console.log(averageWordLength(newWords))
 
 
-console.log('Ex4.2 <---------------------------------------------------------- V2222222 ++++++++++++++++++++++++++++++++')
+console.log('Ex4.2 <---------------------------------------------------------- V2')
 
 const pullits = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function mitjanaStrings (arr) {
-    if (arr.lenght === 0) {
-    console.log('Però què és aquesta merda que em dones?')
-  }
+function mitjanaStrings(arr) {
+  //   if (arr.lenght === 0) {
+  //   console.log('Però què és aquesta merda que em dones?')
+  // }
 
   let sumaTotalStrings = 0
-  // let mitjanaFinalStrings = 0
+  let mitjanaFinalStrings = 0
 
   for (let i = 0; i < arr.length; i++) {
     sumaTotalStrings += arr[i].length
   }
-  // mitjanaFinalStrings = sumaTotalStrings / arr.lenght
+  // mitjanaFinalStrings = sumaTotalStrings / arr.lenght  //arr.lenght no funciona i no entenc xq ¿?
+  // return arr.lenght
   // return mitjanaFinalStrings.toFixed(3)
   return sumaTotalStrings
 }
-console.log('<  -------  >')
 console.log(mitjanaStrings(pullits))
-console.log('<  -------  >')
 
 
 // function mitjanaStrings (arr) {
@@ -448,7 +447,7 @@ console.log('<  -------  >')
 
 //Bonus 4   -----------------------------------------------------------------------------------------------------
 //Create function avg(arr) that receives any mixed array and calculates average. Consider as mixed array an array filled with numbers and/or strings and/or booleans.
-//const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+// const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 function avg(arr) {
   let mixedAvg = 0
@@ -470,6 +469,42 @@ function avg(arr) {
   return mixedAvgReal
 }
 console.log(avg(mixedArr))
+
+
+
+
+
+
+
+console.log('Ex4.3 BONUS <---------------------------------------------------------- V2')
+
+function mitjanaMixed(arr) {
+  if (!arr.length) {
+    console.log('Dame argo, polfavol')
+  }
+
+  let mixedSuma = 0
+
+  for (let i=0; i<arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      mixedSuma += arr[i]
+    } else if (typeof arr[i] === 'string') {
+      mixedSuma += arr[i].length
+    } else if (typeof arr[i] === 'boolean') {
+      if (arr[i] === true) {
+        mixedSuma += +1
+      } else {
+        mixedSuma
+      }
+    }
+  }
+
+  let mitjanaMixedFinal = mixedSuma / arr.length
+
+  return mitjanaMixedFinal.toFixed(1)
+}
+
+console.log(mitjanaMixed(mixedArr))
 
 
 
